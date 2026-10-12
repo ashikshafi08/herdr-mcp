@@ -1,0 +1,24 @@
+{
+  "name": "herdr-mcp",
+  "version": "0.1.0",
+  "description": "MCP server (stdio) that drives Herdr coding-agent workspaces via the herdr/git/gh CLIs",
+  "type": "module",
+  "bin": { "herdr-mcp": "dist/index.js" },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:list": "node test/list-tools.mjs",
+    "test:live": "node test/live-readonly.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.0"
+  }
+}
